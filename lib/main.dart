@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:math';
 
-const String webAppUrl = "https://script.google.com/macros/s/AKfycbyCnd0DcFXHxJY9kkLYY8HFM282urHGizg9nhenV-rdq623liL0v7YdBDJjkeOpatGx/exec";
+const String webAppUrl = "https://script.google.com/macros/s/AKfycbyLK8iIJXySXFPTDs5aAg4fEbIJqUFSqT6m2KzdRkXpd0lw3h8xcxd1KbWDkzi4UiiY/exec";
 
 void main() {
   runApp(const RestaurantApp());
