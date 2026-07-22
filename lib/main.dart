@@ -17,11 +17,16 @@ class RestaurantApp extends StatelessWidget {
     return MaterialApp(
       title: 'إدارة الصالة',
       debugShowCheckedModeBanner: false,
-      directionality: TextDirection.rtl,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         useMaterial3: true,
       ),
+      builder: (context, child) {
+        return Directionality(
+          textDirection: TextDirection.rtl,
+          child: child!,
+        );
+      },
       home: const MainHomeScreen(),
     );
   }
@@ -106,7 +111,7 @@ class _EmployeesPageState extends State<EmployeesPage> {
 
     showDialog(
       context: context,
-      builder: (ctx) => StatefulWidget(
+      builder: (ctx) => StatefulBuilder(
         builder: (context, setDialogState) => AlertDialog(
           title: const Text('إضافة موظف جديد'),
           content: SingleChildScrollView(
@@ -249,7 +254,7 @@ class _SectionsPageState extends State<SectionsPage> {
 
     showDialog(
       context: context,
-      builder: (ctx) => StatefulWidget(
+      builder: (ctx) => StatefulBuilder(
         builder: (context, setDialogState) => AlertDialog(
           title: const Text('إضافة كاري جديدة'),
           content: Column(
